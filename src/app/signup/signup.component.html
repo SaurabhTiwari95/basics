@@ -1,1 +1,46 @@
-<p>signup works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <table class="registerStyle">
+        <tbody>
+            <tr>
+                <td style="padding: 20px;">
+                    <span> logo/image here !! </span>
+                </td>
+                <td style="float: right; border: 1px solid black;padding: 20px;">
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <label for="fName">First Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="First Name" formControlName="fName">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="lname">Last Name</label>
+                                <input type="text" class="form-control" id="lName" placeholder="Last Name" formControlName="lName">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-8">
+                                <label for="mobile">Mobile</label>
+                                <input type="tel" class="form-control" id="tel" placeholder="Mobile" formControlName="mobile">
+                            </div> 
+                            <div class="form-group col-md-8">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email" formControlName="email">
+                            </div>
+                        </div>
+                        <!-- [disabled] = "!registerForm.invalid" -->
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
